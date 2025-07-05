@@ -183,7 +183,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           body_path: /tmp/changelog-excerpt.md
           prerelease: ${{ needs.validate-tag.outputs.is-prerelease == 'true' }}
